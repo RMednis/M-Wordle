@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">M-Wordle</string>
+    <string name="text_entry_info">Ievadi lietvārdu vienskaitļa nominatīvā (%s burti)</string>
+    <string name="text_game_lost">Mēģinājumi beigušies!</string>
+    <string name="error_word_not_in_dictionary">Vārds neatrodas vārdnīcā!</string>
+    <string name="error_word_doesnt_start_with_letter">Vārds nesākas ar burtu \'%s\'</string>
+    <string name="error_word_guessed">Vārds jau ir minēts!</string>
+    <string name="title_settings">Iestatījumi</string>
+    <string name="title_about">Kā spēlēt?</string>
+    <string name="title_info">Informācija</string>
+    <string name="text_about">
+        <![CDATA[
+
+        <b>Šī ir spēles "Wordle" latviskota versija.</b><br>
+        Tavs mērķis ir uzminēt 5 burtu lietvārdu vienskaitļa nominatīvā:<br>
+        <i>Mamma, Tētis, Dzīve, Jauda, utt…</i><br><br>
+
+        Pēc tā tiks noteikts cik tuvu tavs ievadītais vārds ir nejauši izvēlētajam:<br>
+        <b>- Zaļš</b> - Burts ir vārdā un pareizajā vietā <br>
+        <b>- Dzeltens</b> - Burts ir vārdā, bet nav pareizajā vietā <br>
+        <b>- Sarkans</b> - Burts nav vārdā <br><br>
+
+        Zemāk esošajos iestatījumos ir iespējams spēli <br> padarīt līdzīgāku Latvijā agrajos 2000-šajos
+        gados pieejamajam "Tildes Lingo".<br> <br>
+
+        Tas bija pēc uzbūves līdzīgs, bet atsķīrās ar sekojošajām lietām: <br><i>
+        - Varēja ievadīt jebkādus burtus, ne tikai īstus vārdus<br>
+        - Pirmais burts tika parādīts spēles sākumā</i><br>
+        ]]>
+    </string>
+    <string name="about_text"><![CDATA[
+        <p>Spēle tika izveidota priekš RTU Datortehnikas un Automātikas 2. Kursa Android izstrādes priekšmeta.</p>
+        <p>Vārdnīcas priekš ievades tika lejupielādētas un filtrētas no Tēzurs skaidrojošās un sinonīmu vardnīcas,
+        ko nodrošina Latvijas Universitātes Makslīgā Intelekta Laborotorija (LUMII)</p>
+        <p>Dati pieejami no: <br><a href="https://github.com/LUMII-AILab/Tezaurs">https://github.com/LUMII-AILab/Tezaurs</a><br><br>
+        Filtrēšana tika daļēji veikta izmantojot tēzurs nodrošināto API:<br> <a href="https://api.tezaurs.lv/">https://api.tezaurs.lv/</a></p><br>
+        <p>Liels paldies, bez šiem resursiem šo spēli nevarētu izveidot &lt;3</p>
+        <p>Paša nejaušo vārdu ģenerēšana izmanto mazāku vārdnīcu, kas tika filtrēta manuāli, izvēloties vārdus kas ir
+        labāk pazīstami, nav tieši svešvārdi, utt. </p>
+        <p>Viss kods priekš filtrēšanas ir pieejams iekš projekta <i>assets/filtering-scripts</i> mapes.
+        Tur arī ir pieejamas pašas ģenērātās vārdnīcas, ko spēle izmanto.</p>
+        <p>Atskaitot to, spēle arī izmanto sekojošās ārējās bibliotēkas:</p>
+        <ul>
+        <li><i>Konfetti [<a href="https://github.com/DanielMartinus/Konfetti">https://github.com/DanielMartinus/Konfetti</a>]</i></li>
+        </ul>
+        <p>Kas ir licensētas zem sekojošām licensēm:</p>
+        <i><code>Konfetti
+
+        ISC License
+
+        Copyright © 2017 Dion Segijn
+
+        Permission to <span class="hljs-keyword">use</span>, copy, <span class="hljs-keyword">modify</span>, <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> <span class="hljs-keyword">distribute</span> this software <span class="hljs-keyword">for</span> <span class="hljs-keyword">any</span>
+        purpose <span class="hljs-keyword">with</span> <span class="hljs-keyword">or</span> <span class="hljs-keyword">without</span> fee <span class="hljs-keyword">is</span> hereby granted, provided that the above
+        copyright <span class="hljs-keyword">notice</span> <span class="hljs-keyword">and</span> this permission <span class="hljs-keyword">notice</span> appear <span class="hljs-keyword">in</span> all copies.
+
+        THE SOFTWARE <span class="hljs-keyword">IS</span> PROVIDED <span class="hljs-string">"AS IS"</span> <span class="hljs-keyword">AND</span> THE AUTHOR DISCLAIMS ALL WARRANTIES
+        <span class="hljs-keyword">WITH</span> REGARD <span class="hljs-keyword">TO</span> THIS SOFTWARE <span class="hljs-keyword">INCLUDING</span> ALL IMPLIED WARRANTIES <span class="hljs-keyword">OF</span>
+        MERCHANTABILITY <span class="hljs-keyword">AND</span> FITNESS. <span class="hljs-keyword">IN</span> <span class="hljs-keyword">NO</span> <span class="hljs-keyword">EVENT</span> SHALL THE AUTHOR BE LIABLE <span class="hljs-keyword">FOR</span>
+        <span class="hljs-keyword">ANY</span> SPECIAL, DIRECT, INDIRECT, <span class="hljs-keyword">OR</span> CONSEQUENTIAL DAMAGES <span class="hljs-keyword">OR</span> <span class="hljs-keyword">ANY</span> DAMAGES
+        WHATSOEVER RESULTING <span class="hljs-keyword">FROM</span> LOSS <span class="hljs-keyword">OF</span> <span class="hljs-keyword">USE</span>, <span class="hljs-keyword">DATA</span> <span class="hljs-keyword">OR</span> PROFITS, WHETHER <span class="hljs-keyword">IN</span> AN
+        <span class="hljs-keyword">ACTION</span> <span class="hljs-keyword">OF</span> CONTRACT, NEGLIGENCE <span class="hljs-keyword">OR</span> OTHER TORTIOUS <span class="hljs-keyword">ACTION</span>, ARISING <span class="hljs-keyword">OUT</span> <span class="hljs-keyword">OF</span>
+        <span class="hljs-keyword">OR</span> <span class="hljs-keyword">IN</span> <span class="hljs-keyword">CONNECTION</span> <span class="hljs-keyword">WITH</span> THE <span class="hljs-keyword">USE</span> <span class="hljs-keyword">OR</span> <span class="hljs-keyword">PERFORMANCE</span> <span class="hljs-keyword">OF</span> THIS SOFTWARE.
+        </code></pre> </i>
+        <br><br>
+
+        <p><b>Ar ❤️ Reinis Gunārs Mednis, 2023, Ogre, Latvija <b></p>
+
+        ]]>
+    </string>
+
+    <string name="settings_option_max_guesses">Maskimālie minējumi (1–10)</string>
+    <string name="settings_option_show_first_letter">Rādīt pirmo burtu</string>
+    <string name="settings_title_settings">Iestatījumi</string>
+    <string name="settings_option_force_words">Obligāti jāievada vārdi</string>
+    <string name="settings_option_allow_duplicates">Atļaut variākus vienādus minējumus</string>
+    <string name="settings_option_cheats">Šmaukšanās (debug only)</string>
+    <string name="choosable_words">Minamie Vārdi: %s</string>
+    <string name="total_words">Kopējie Vārdi: %s</string>
+    <string name="gameover_title_win">Tu uzvarēji :D</string>
+    <string name="gameover_text_win">Tev vajadzēja %s reizi(-es) lai uzminētu</string>
+    <string name="gameover_title_lose">Tev beidzās mēģinājumi… :(</string>
+    <string name="gameover_text_lose">Ar visām %s reizēm tev diemžēl neizdevās uzminēt</string>
+    <string name="input_hint">Ievadi vārdu vienskaitļa nominatīvā (5 burti)</string>
+    <string name="main_titlebar">Mednis - Wordle</string>
+    <string name="settings_cog">Settings Cog</string>
+</resources>

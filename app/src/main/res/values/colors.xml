@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#2ddb48</color>
+    <color name="dark_green">#157321</color>
+    <color name="dark_grey">#2E3440</color>
+    <color name="light_blue">#5E81AC</color>
+
+    <!-- Letter Colors -->
+    <color name="wordle_green">#A3BE8C</color>
+    <color name="wordle_red">#BF616A</color>
+    <color name="wordle_yellow">#D08770</color>
+    <color name="wordle_empty">#D8DEE9</color>
+
+</resources>
