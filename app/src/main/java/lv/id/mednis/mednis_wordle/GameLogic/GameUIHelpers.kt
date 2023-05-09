@@ -3,9 +3,6 @@ package lv.id.mednis.mednis_wordle.GameLogic
 import GameSettings
 import android.content.Context
 import android.content.Intent
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
@@ -74,25 +71,32 @@ class GameUIHelpers {
             doConfetti(ConfettiView)
 
             val gameOverIntent = Intent(context, WinLoseActivity::class.java)
+            gameOverIntent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
             gameOverIntent.putExtra("win", true)
             gameOverIntent.putExtra("word", word)
             gameOverIntent.putExtra("attempts", attempts)
 
             // Launch the game over activity after 2 seconds
             Handler(Looper.getMainLooper()).postDelayed({
-                     startActivity(context, gameOverIntent, null)
+                startActivity(context, gameOverIntent, null)
+                context.finish()
             }, 5000)
         }
 
         fun gameOverLost(context: Context, word: String, attempts: Int) {
             gameOver(context)
             val gameOverIntent = Intent(context, WinLoseActivity::class.java)
+            gameOverIntent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+
             gameOverIntent.putExtra("win", false)
             gameOverIntent.putExtra("word", word)
             gameOverIntent.putExtra("attempts", attempts)
 
             // Launch the game over activity
             startActivity(context, gameOverIntent, null)
+
+            // End the activity
+            (context as MainActivity).finish()
         }
     }
 

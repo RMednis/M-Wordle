@@ -63,13 +63,17 @@ class WinLoseActivity : AppCompatActivity() {
 
         // Button to go back to the game
         findViewById<Button>(R.id.GameOverPoga).setOnClickListener {
-            ContextCompat.startActivity(this, Intent(this, MainActivity::class.java), null)
+            intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+            ContextCompat.startActivity(this, intent, null)
+            this.finish()
         }
 
         // Settings Button
         findViewById<ImageButton>(R.id.SettingsBackButton)
             .setOnClickListener {
                 ContextCompat.startActivity(this, Intent(this, SettingsActivity::class.java), null)
+                this.finish()
             }
 
     }

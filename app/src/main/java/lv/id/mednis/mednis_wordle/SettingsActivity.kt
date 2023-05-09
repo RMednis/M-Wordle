@@ -21,10 +21,15 @@ class SettingsActivity : AppCompatActivity() {
         // Atpakaļ pogas listeneris
         findViewById<ImageButton>(R.id.SettingsBackButton)
             .setOnClickListener {
-                ContextCompat.startActivity(
-                    this,
-                    Intent(this, MainActivity::class.java), null
-                )
+                val intent = Intent(this, MainActivity::class.java)
+
+                // Remove all previous activities from the stack
+                intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+
+                ContextCompat.startActivity(this, intent, null)
+
+                // End this activity
+                this.finish()
             }
 
         val gameSettings = GameSettings(this)
