@@ -3,13 +3,13 @@ package lv.id.mednis.mednis_wordle
 import GameSettings
 import android.content.Intent
 import android.os.Bundle
-import android.text.Html
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
+import androidx.core.text.HtmlCompat
 import lv.id.mednis.mednis_wordle.GameLogic.Dictionary
 
 class SettingsActivity : AppCompatActivity() {
@@ -49,9 +49,10 @@ class SettingsActivity : AppCompatActivity() {
         number_max_guesses.setText(gameSettings.maximumGuesses.toString())
 
         // Uzstādām teksta datus
-        val infotext = Html.fromHtml(getString(R.string.text_about))
+        val infotext = HtmlCompat.fromHtml(getString(R.string.text_about), HtmlCompat.FROM_HTML_MODE_LEGACY)
         findViewById<TextView>(R.id.GuideText).text = infotext
-        val aboutext = Html.fromHtml(getString(R.string.about_text))
+
+        val aboutext = HtmlCompat.fromHtml(getString(R.string.text_about), HtmlCompat.FROM_HTML_MODE_LEGACY)
         findViewById<TextView>(R.id.AboutText).text = aboutext
 
         val data = Dictionary().getDictionaryStats(this)
